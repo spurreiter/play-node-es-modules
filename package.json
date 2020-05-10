@@ -1,0 +1,30 @@
+{
+  "name": "@spurreiter/play-node-es-modules",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Writing backwards compatible ES-Modules for NodeJs ",
+  "keywords": [],
+  "license": "UNLICENSE",
+  "author": "spurreiter",
+  "type": "module",
+  "exports": {
+    "import": "./index.js",
+    "require": "./main.cjs"
+  },
+  "main": "./main.cjs",
+  "scripts": {
+    "clean": "rm -rf node_modules; npm i",
+    "lint": "eslint **/*.js **/*.cjs",
+    "preinstall": "npm run build",
+    "build": "cd my-esm-package && npm pack",
+    "start": "node start.cjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@my/package": "file:my-esm-package/my-esm-package-1.0.0.tgz",
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0"
+  }
+}

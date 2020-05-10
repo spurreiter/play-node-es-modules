@@ -1,0 +1,27 @@
+{
+  "name": "@my/esm-package",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "exports": {
+    "import": "./index.js",
+    "require": "./main.cjs"
+  },
+  "main": "./main.cjs",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/*.test.js"
+  },
+  "dependencies": {
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8"
+  }
+}
